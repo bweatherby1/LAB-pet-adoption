@@ -21,7 +21,7 @@ const pets = [
       color: "Yellow",
       specialSkill: "Can prove he is a real man by drinking whiskey.",
       type: "dino",
-      imageUrl: "https://mydinosaurs.com/wp-content/uploads/2017/02/2-3-600x400.jpg"
+      imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZs64lyJlCjcpiG29wY6vY3WQSgAjFyGbu2g&usqp=CAU"
     },
     {
       id: 4,
@@ -61,7 +61,7 @@ const pets = [
       color: "Grey",
       specialSkill: "Comfortable in the outdoors for up to eight hours.",
       type: "dino",
-      imageUrl: "http://www.theouthousers.com/images/jck//ThanosCopter/news/grumpasaur.jpg"
+      imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzTGozypvK2n0hQToTuiiRg2RvOF5hy-Ar_Q&usqp=CAU"
     },
     {
       id: 9,
@@ -85,7 +85,7 @@ const pets = [
       color: "Orange",
       specialSkill: "Can be around food without staring creepily at it.",
       type: "dino",
-      imageUrl: "http://www.cantref.com/userfiles/events/walking%20dino.jpg?w=600"
+      imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoHXEybhZ5gJiQauC-77zRJAGwHwEjKy2FPA&usqp=CAU"
     },
     {
       id: 12,
@@ -242,17 +242,19 @@ const pets = [
   ];
 
 
-  const targetingApp = document.querySelector("#app")
+  const thisApp = document.querySelector("#app")
 
   let domString = '';
 
-  for (const pet of pets) {
+  for (let pet of pets) {
    domString += `<div class="card" style="width: 18rem;">
    <img src=${pet.imageUrl} class="car-img-top">
-   <div class="name">
+   <a href="#" class="btn btn-primary">Take me home!</a>
+   <div class="name"></div>
    <h5 class="name">${pet.name}</h5>
-   <p class="info">${pet.type} <br> ${pet.color} <br> ${pet.specialSkill}</p>`;
-
+   <p class="info">${pet.type} <br> ${pet.color} <br> ${pet.specialSkill}</p>;
+   
+   </div>`
   };
 
-  targetingApp.innerHTML = domString;
+  thisApp.innerHTML = domString;

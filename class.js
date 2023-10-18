@@ -75,10 +75,10 @@ const pies = [{
 
 const app = document.querySelector("#app")
 
-let domString ="card"
+let domString =""
 
 for (pie of pies) {
-  domString += <div class="card" style="width: 18rem;">
+  domString += `<div class="card" style="width: 18rem;">
   <div class="card-body">
     <h5 class="card-title">(pie.name)</h5>
     
@@ -87,7 +87,7 @@ for (pie of pies) {
   </div>
 </div>
 
-</div>
+</div>`
 }
 
-app.innerHTML =
+app.innerHTML = domString
