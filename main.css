@@ -1,8 +1,12 @@
 body {
   background-color: green;
-}
+};
 
 .card {
   background-color: orange;
-  width
+}
+
+#dinoB {
+  color: white;
+  background-color: blue;
 }
