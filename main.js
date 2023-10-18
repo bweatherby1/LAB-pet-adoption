@@ -241,20 +241,36 @@ const pets = [
     }
   ];
 
-
-  const thisApp = document.querySelector("#app")
-
   let domString = '';
 
-  for (let pet of pets) {
-   domString += `<div class="card" style="width: 18rem;">
-   <img src=${pet.imageUrl} class="car-img-top">
-   <a href="#" class="btn btn-primary">Take me home!</a>
-   <div class="name"></div>
-   <h5 class="name">${pet.name}</h5>
-   <p class="info">${pet.type} <br> ${pet.color} <br> ${pet.specialSkill}</p>;
-   
-   </div>`
-  };
+  const renderToDom = (array) => {
+    let domString = '';
+    for(pet of pets) {
+      domString += `<div class="card" style="width: 18rem;">
+      <img src=${pet.imageUrl} class="car-img-top">
+      <a href="#" class="btn btn-primary">Take me home!</a>
+      <div class="name"></div>
+      <h5 class="name">${pet.name}</h5>
+      <p class="info">${pet.type} <br> ${pet.color} <br> ${pet.specialSkill}</p>;
+      
+      </div>`
+    }
 
-  thisApp.innerHTML = domString;
+      const app = document.querySelector("#app")
+      app.innerHTML = domString
+  }
+
+  renderToDom(pets)
+
+  const dinoButton = document.querySelector("#dinoB")
+
+const filter = () => {
+let dinoTypeArray = []
+    for(pet of pets) {
+      if(pet.type === "dino") {
+        dinoTypeArray.push(pet)
+      }
+    }
+    renderToDom(dinoTypeArray)
+ }
+dinoButton.addEventListener('click', filter)
