@@ -239,11 +239,11 @@ const pets = [
       type: "dino",
       imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRDfy3cFIooUJ15StDKw-s1uBISmAn0tsxwA&usqp=CAU"
     }
-  ];
+  ]
 
   let domString = '';
 
-  const renderToDom = (array) => {
+  const renderToDom = (pets) => {
     let domString = '';
     for(pet of pets) {
       domString += `<div class="card" style="width: 18rem;">
@@ -262,15 +262,25 @@ const pets = [
 
   renderToDom(pets)
 
-  const dinoButton = document.querySelector("#dinoB")
+  const dinoButton = document.querySelector("#dino")
+  const dogButton = document.querySelector("#dog")
+  const catButton = document.querySelector("#cat")
+  const allButton = document.querySelector("#all")
 
-const filter = () => {
-let dinoTypeArray = []
+  let filter = (pet) => {
+  let dinoTypeArray = []
     for(pet of pets) {
       if(pet.type === "dino") {
         dinoTypeArray.push(pet)
+      
       }
-    }
+      
+      }
+    
     renderToDom(dinoTypeArray)
  }
+
 dinoButton.addEventListener('click', filter)
+catButton.addEventListener('click', filter)
+dogButton.addEventListener('click', filter)
+allButton.addEventListener('click', filter)
