@@ -2,11 +2,23 @@ body {
   background-color: green;
 };
 
-.card {
+div.card {
   background-color: orange;
 }
 
-#dinoB {
+#dino {
+  color: white;
+  background-color: red;
+}
+#dog {
   color: white;
   background-color: blue;
+} 
+#cat {
+  color: white;
+  background-color: brown;
+} 
+#all {
+  color: white;
+  background-color: black;
 }
