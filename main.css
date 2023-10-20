@@ -2,8 +2,11 @@ body {
   background-color: green;
 };
 
-div.card {
+div {
   background-color: orange;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 
 #dino {
