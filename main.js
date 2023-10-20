@@ -255,32 +255,46 @@ const pets = [
       
       </div>`
     }
-
+      
       const app = document.querySelector("#app")
       app.innerHTML = domString
   }
 
   renderToDom(pets)
 
-  const dinoButton = document.querySelector("#dino")
-  const dogButton = document.querySelector("#dog")
-  const catButton = document.querySelector("#cat")
-  const allButton = document.querySelector("#all")
+   const dinoButton = document.querySelector("#dino")
+   const dogButton = document.querySelector("#dog")
+   const catButton = document.querySelector("#cat")
+   const allButton = document.querySelector("#all")
 
-  let filter = (pet) => {
-  let dinoTypeArray = []
+  const filter = (pets, type) => {
+  let allPetsArray = []
+
     for(pet of pets) {
-      if(pet.type === "dino") {
-        dinoTypeArray.push(pet)
-      
-      }
-      
-      }
-    
-    renderToDom(dinoTypeArray)
- }
+      if(pet.type === type) {
+        allPetsArray.push(pet)
+     } 
+    } 
+    renderToDom(allPetsArray)
+  
+ } 
 
-dinoButton.addEventListener('click', filter)
-catButton.addEventListener('click', filter)
-dogButton.addEventListener('click', filter)
-allButton.addEventListener('click', filter)
+dinoButton.addEventListener("click", () => {
+ filter (pets, "dino");
+  renderToDom(allPetsArray);
+})
+
+dogButton.addEventListener("click", () => {
+  filter (pets, "dog");
+   renderToDom(allPetsArray);
+ })
+
+ catButton.addEventListener("click", () => {
+  filter (pets, "cat");
+   renderToDom(allPetsArray);
+ })
+
+ allButton.addEventListener("click", () => {
+  filter (pets);
+   renderToDom(pets);
+ })
