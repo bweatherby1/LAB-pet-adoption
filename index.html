@@ -10,16 +10,9 @@
 </head>
 
 <body>
-  <form id="addPet">
-    <div class="form-floating mb-3">
-      <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-      <label for="floatingInput">Email address</label>
-    </div>
-    <div class="form-floating">
-      <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-      <label for="floatingPassword">Password</label>
-    </div>
-  </form>
+  
+  
+  
   <div id="buttons">
     <button type="button" id="dino" class="button">Dino</button>
     <button type="button" id="dog" class="button">Dogs</button>
@@ -33,5 +26,36 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 <script src="main.js"></script>
+
+<form id="addPet">
+    <div class="form-floating mb-3">
+      <input type="text" class="form-control" id="newPetName" placeholder="Fluffy">
+      <label for="newPetName">Fluffy</label>
+    </div>
+    
+    <div class="form-floating">
+      <input type="text" class="form-control" id="newPetType" placeholder="Megalodon">
+      <label for="newPetType">Megalodon</label>
+    </div>
+
+    <div class="form-floating">
+      <input type="text" class="form-control" id="newPetColor" placeholder="Purple">
+      <label for="newPetColor">Orange</label>
+    </div>
+
+    <div class="form-floating">
+      <input type="text" class="form-control" id="newPetSS" placeholder="Will own you on the golf course">
+      <label for="newPetSS">I do stuff</label>
+    </div>
+
+    <div class="form-floating">
+      <input type="text" class="form-control" id="newPetPic">
+      <label for="newPetPic">Pic url of critter!</label>
+    </div>
+
+    <button type="submit" id="addPetInfo">Add Pet</button>
+    
+    
+  </form>
 </body>
 </html>
