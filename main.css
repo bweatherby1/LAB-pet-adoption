@@ -44,3 +44,13 @@ img {
 #buttons {
   text-align: center;
 }
+
+.button {
+  width: 100px;
+  height: 50px;
+}
+
+form {
+  width: 400px;
+  
+}
