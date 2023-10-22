@@ -241,7 +241,7 @@ const pets = [
   }
 ]
 
-let domString = '';
+
 
 const renderToDom = (pets) => {
   let domString = '';
@@ -299,20 +299,19 @@ filter (pets);
  renderToDom(pets);
 })
 
-console.log("PETS EVERYWHERE");
 
-const form = document.querySelector("form")
+const form = document.querySelector('form')
 
-const createPet = (event) => {
-event.preventDefault()
+const createPet = (e) => {
+e.preventDefault()
 
 const newPet = {
      id: pets.length + 1,
-     name: document.querySelector('#newPetName'),
-     color: document.querySelector('#newPetColor'),
-     type: document.querySelector('#newPetType'),
-     specialSkill: document.querySelector('#newPetSS'),
-     imageUrl: document.querySelector('#newPetPic')
+     name: document.querySelector('#newPetName').value,
+     color: document.querySelector('#newPetColor').value,
+     type: document.querySelector('#newPetType').value,
+     specialSkill: document.querySelector('#newPetSS').value,
+     imageUrl: document.querySelector('#newPetPic').value
 }
 pets.push(newPet)
 renderToDom(pets)
