@@ -311,11 +311,11 @@ event.preventDefault()
 
   const newPet = {
        id: pets.length + 1,
-       name: document.querySelector('#newPetName'),
-       color: document.querySelector('#newPetColor'),
-       type: document.querySelector('#newPetType'),
-       specialSkill: document.querySelector('#newPetSS'),
-       imageUrl: document.querySelector('#newPetPic')
+       name: document.querySelector('#newPetName').value,
+       color: document.querySelector('#newPetColor').value,
+       type: document.querySelector('#newPetType').value,
+       specialSkill: document.querySelector('#newPetSS').value,
+       imageUrl: document.querySelector('#newPetPic').value
   }
   pets.push(newPet)
   renderToDom(pets)
