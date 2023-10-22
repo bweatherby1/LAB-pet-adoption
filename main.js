@@ -252,7 +252,7 @@ const renderToDom = (pets) => {
     <div class="name"></div>
     <h5 class="name">${pet.name}</h5>
     <p class="info">${pet.type} <br> ${pet.color} <br> ${pet.specialSkill}</p>
-    
+    <button class="btn btn-danger" id="delete--${pet.id}">Delete</button>
     </div>`
   }
     
@@ -323,3 +323,19 @@ event.preventDefault()
 }
 
  form.addEventListener('submit', createPet)
+
+
+ app.addEventListener('click', (e) => {
+  if (e.target.id.includes("delete")) {
+    const [, id] = e.target.id.split("--");
+    const index = pets.findIndex(e => e.id === Number(id));
+    pets.splice(index, 1);
+    renderToDom(pets);
+  }
+});
+const startApp = () => {
+  renderToDom(pets);
+}
+
+
+startApp();
