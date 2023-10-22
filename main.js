@@ -318,4 +318,33 @@ renderToDom(pets)
 form.reset()
 }
 
+
 form.addEventListener('submit', createPet)
+
+ allButton.addEventListener("click", () => {
+  filter (pets);
+   renderToDom(pets);
+ })
+
+ console.log("PETS EVERYWHERE");
+
+ const form = document.querySelector("form")
+
+const createPet = (event) => {
+event.preventDefault()
+
+  const newPet = {
+       id: pets.length + 1,
+       name: document.querySelector('#newPetName'),
+       color: document.querySelector('#newPetColor'),
+       type: document.querySelector('#newPetType'),
+       specialSkill: document.querySelector('#newPetSS'),
+       imageUrl: document.querySelector('#newPetPic')
+  }
+  pets.push(newPet)
+  renderToDom(pets)
+  form.reset()
+}
+
+ form.addEventListener('submit', createPet)
+
