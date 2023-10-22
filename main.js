@@ -300,33 +300,9 @@ filter (pets);
 })
 
 
-const form = document.querySelector('form')
-
-const createPet = (e) => {
-e.preventDefault()
-
-const newPet = {
-     id: pets.length + 1,
-     name: document.querySelector('#newPetName').value,
-     color: document.querySelector('#newPetColor').value,
-     type: document.querySelector('#newPetType').value,
-     specialSkill: document.querySelector('#newPetSS').value,
-     imageUrl: document.querySelector('#newPetPic').value
-}
-pets.push(newPet)
-renderToDom(pets)
-form.reset()
-}
 
 
-form.addEventListener('submit', createPet)
 
- allButton.addEventListener("click", () => {
-  filter (pets);
-   renderToDom(pets);
- })
-
- console.log("PETS EVERYWHERE");
 
  const form = document.querySelector("form")
 
@@ -347,4 +323,3 @@ event.preventDefault()
 }
 
  form.addEventListener('submit', createPet)
-
