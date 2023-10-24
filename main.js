@@ -252,7 +252,7 @@ const renderToDom = (pets) => {
     <div class="name"></div>
     <h5 class="name">${pet.name}</h5>
     <p class="info">${pet.type} <br> ${pet.color} <br> ${pet.specialSkill}</p>
-    <button class="btn btn-danger" id="delete--${pet.id}">Delete</button>
+    <button class="btn btn-danger" id="id2" id="delete--${pet.id}">Delete</button>
     </div>`
   }
     
