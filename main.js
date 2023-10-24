@@ -252,8 +252,9 @@ const renderToDom = (pets) => {
     <div class="name"></div>
     <h5 class="name">${pet.name}</h5>
     <p class="info">${pet.type} <br> ${pet.color} <br> ${pet.specialSkill}</p>
-    <button class="btn btn-danger" id="delete--${pet.id}" id="idTwo">Delete</button>
+    <p><button class="btn btn-danger" id="delete--${pet.id}" id="idTwo">!!!Delete!!!</button></p>
     </div>`
+
   }
     
     const app = document.querySelector("#app")
@@ -267,36 +268,27 @@ renderToDom(pets)
  const catButton = document.querySelector("#cat")
  const allButton = document.querySelector("#all")
 
-const filter = (pets, type) => {
-let allPetsArray = []
 
+const filter = (type) => {
+let allPetsArray = []
   for(pet of pets) {
     if(pet.type === type) {
       allPetsArray.push(pet)
    } 
   } 
   renderToDom(allPetsArray)
-
 } 
-
 dinoButton.addEventListener("click", () => {
-filter (pets, "dino");
-renderToDom(allPetsArray);
+filter ("dino");
 })
-
 dogButton.addEventListener("click", () => {
-filter (pets, "dog");
- renderToDom(allPetsArray);
+filter ("dog");
 })
-
 catButton.addEventListener("click", () => {
-filter (pets, "cat");
- renderToDom(allPetsArray);
+filter ("cat");
 })
-
 allButton.addEventListener("click", () => {
-filter (pets);
- renderToDom(pets);
+renderToDom(pets);
 })
 
 
