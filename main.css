@@ -7,7 +7,7 @@ body {
   background-color: turquoise;
   font-weight: bold;
 margin: 10px;
-border-bottom: 400px;
+border-bottom: 10px;
 border-color: pink;
 display: flex;
 flex: wrap;
@@ -30,7 +30,7 @@ align-items: center;
  display: flex;
  flex-wrap: wrap;
  text-align: center;
- margin: 200px;
+ margin: 5px;
 
 }
 
@@ -50,4 +50,8 @@ form {
   width: 400px;
 margin: 20px;
   
+}
+
+.dropdown {
+  background-color: seagreen;
 }
