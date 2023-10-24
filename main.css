@@ -4,13 +4,13 @@ body {
   border-color: red;
 }
 
-.card {
+#petCards {
   background-color: orange;
   font-weight: bold;
-margin: 20px;
+margin: 10px;
 display: flex;
 flex: wrap;
-
+align-items: center;
 }
 
 #dino {
@@ -32,6 +32,7 @@ flex: wrap;
 #app {
  display: flex;
  flex-wrap: wrap;
+
 }
 
 img {
@@ -52,5 +53,6 @@ img {
 
 form {
   width: 400px;
+margin: 20px;
   
 }
