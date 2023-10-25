@@ -53,5 +53,6 @@ margin: 20px;
 }
 
 .dropdown {
-  background-color: seagreen;
+  background-color: greenyellow; 
+  width: 100%;
 }
